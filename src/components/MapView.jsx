@@ -301,11 +301,11 @@ export default function MapView({ roadsByName, works, clusters, freshAlerts, foc
         zoomControl={true}
         attributionControl={true}
       >
-        {/* Stadia Maps dark tiles: free on localhost, true dark basemap */}
+        {/* Standard OpenStreetMap raster tile layer */}
         <TileLayer
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
-          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-          maxZoom={20}
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          maxZoom={19}
         />
         <FitBoundsOnLoad roadsByName={roadsByName} />
         <FlyToFocus focus={focus} roadsByName={roadsByName} />
